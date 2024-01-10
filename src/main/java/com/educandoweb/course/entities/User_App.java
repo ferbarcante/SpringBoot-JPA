@@ -3,21 +3,29 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class User implements Serializable{
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class User_App implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String email;
 	private String phone;
 	private String password;
 	
-	public User() {
+	public User_App() {
 		
 	}
 
-	public User(Long id, String name, String email, String phone, String password) {
+	public User_App(Long id, String name, String email, String phone, String password) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -79,7 +87,7 @@ public class User implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		User_App other = (User_App) obj;
 		return Objects.equals(id, other.id);
 	}
 	
