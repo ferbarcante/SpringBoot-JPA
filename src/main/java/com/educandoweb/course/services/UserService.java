@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.educandoweb.course.UserRepository;
 import com.educandoweb.course.entities.User_App;
+import com.educandoweb.course.repositories.UserRepository;
 
 @Service
 public class UserService {
